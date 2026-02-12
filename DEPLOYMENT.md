@@ -18,7 +18,7 @@ This guide will help you deploy your trading platform to get a public URL.
    ```
    VITE_SUPABASE_URL=https://follajepfhzkqevrwezv.supabase.co
    VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvbGxhamVwZmh6a3FldnJ3ZXp2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5MjEyNTcsImV4cCI6MjA4NjQ5NzI1N30.WX8g5y4MHcwlzgjFBPoy00kNe5CiIVQf9q26CYsFnDQ
-   VITE_DERIV_APP_ID=your_app_id_here
+   VITE_DERIV_APP_ID=126673
    ```
 5. **Deploy**: Click "Deploy"
 6. **Get URL**: Your app will be at `https://your-project.vercel.app`
@@ -36,7 +36,7 @@ This guide will help you deploy your trading platform to get a public URL.
    ```
    VITE_SUPABASE_URL=https://follajepfhzkqevrwezv.supabase.co
    VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvbGxhamVwZmh6a3FldnJ3ZXp2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5MjEyNTcsImV4cCI6MjA4NjQ5NzI1N30.WX8g5y4MHcwlzgjFBPoy00kNe5CiIVQf9q26CYsFnDQ
-   VITE_DERIV_APP_ID=your_app_id_here
+   VITE_DERIV_APP_ID=126673
    ```
 5. **Deploy**: Click "Deploy site"
 6. **Get URL**: Your app will be at `https://your-project.netlify.app`
@@ -47,17 +47,17 @@ Once deployed, you'll get a URL like:
 - Vercel: `https://your-project.vercel.app`
 - Netlify: `https://your-project.netlify.app`
 
-### Configure Deriv OAuth
+### Configure Deriv OAuth Redirect
 
-1. Copy your production URL
+After deployment, you need to add your production URL as an authorized redirect:
+
+1. Copy your production URL (e.g., `https://your-project.vercel.app`)
 2. Go to [Deriv API Dashboard](https://api.deriv.com/app-registration/)
-3. Edit your app
+3. Edit your app (App ID: 126673)
 4. Add redirect URL: `https://your-project.vercel.app/auth/callback`
-5. Update your `.env` file (or environment variables in hosting):
-   ```
-   VITE_DERIV_APP_ID=your_actual_app_id
-   ```
-6. Redeploy if needed
+5. Save changes
+
+Your app is already configured with App ID 126673, so no additional environment variable changes needed!
 
 ## Troubleshooting
 
