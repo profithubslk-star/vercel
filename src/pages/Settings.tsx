@@ -195,7 +195,7 @@ export const SettingsPage: React.FC = () => {
                           return;
                         }
                         const redirectUri = encodeURIComponent(window.location.origin + '/auth/callback');
-                        window.location.href = `https://oauth.deriv.com/oauth2/authorize?app_id=${appId}&l=EN&brand=deriv`;
+                        window.location.href = `https://oauth.deriv.com/oauth2/authorize?app_id=${appId}&l=EN&brand=deriv&redirect_uri=${redirectUri}`;
                       }}
                       className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition"
                     >
